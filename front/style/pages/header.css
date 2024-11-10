@@ -72,3 +72,48 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background-color: #2a2a2a;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+}
+
+.mobile-menu a:hover {
+    background-color: #3a3a3a;
+    color: #e50914;
+}
+
+.mobile-menu a.active {
+    background-color: #3a3a3a;
+    color: #e50914;
+}
