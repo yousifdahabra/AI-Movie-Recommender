@@ -17,30 +17,30 @@
             <h1>MovieFlix</h1>
             <p class="subtitle">Welcome back</p>
         </div>
-        <form onsubmit="">
+        <form id="loginForm" onsubmit="">
             <div class="form-group">
                 <label for="loginEmail">Email</label>
                 <div class="input-group">
                     <input type="email" id="loginEmail" required>
                     <i class="fas fa-envelope"></i>
                 </div>
-                <div class="error-message"></div>
+                <div class="error-message" id="loginEmailError"></div>
             </div>
             <div class="form-group">
                 <label for="loginPassword">Password</label>
                 <div class="input-group">
                     <input type="password" id="loginPassword" required>
                     <i class="fas fa-lock"></i>
-                    <button type="button" class="password-toggle" onclick="">
+                    <button type="button" class="password-toggle" onclick="togglePassword('loginPassword')">
                         <i class="fas fa-eye"></i>
                     </button>
                 </div>
-                <div class="error-message"></div>
+                <div class="error-message" id="loginPasswordError"></div>
             </div>
-            <button type="submit">Sign In</button>
+            <button type="submit" id="loginButton">Sign In</button>
         </form>
         <div class="switch-form">
-            <p>New to MovieFlix?<a href="#" onclick="">Sign up now</a></p>
+            <p>New to MovieFlix?<a href="#" onclick="toggleForms()">Sign up now</a></p>
         </div>
     </div>
 
@@ -49,14 +49,14 @@
             <h1>MovieFlix</h1>
             <p class="subtitle">Create an account</p>
         </div>
-        <form onsubmit="">
+        <form id="signupForm" onsubmit="">
             <div class="form-group">
                 <label for="signupName">Name</label>
                 <div class="input-group">
                     <input type="text" id="signupName" required>
                     <i class="fas fa-user"></i>
                 </div>
-                <div class="error-message"></div>
+                <div class="error-message" id="signupNameError"></div>
             </div>
             <div class="form-group">
                 <label for="signupEmail">Email</label>
@@ -64,25 +64,26 @@
                     <input type="email" id="signupEmail" required>
                     <i class="fas fa-envelope"></i>
                 </div>
-                <div class="error-message"></div>
+                <div class="error-message" id="signupEmailError"></div>
             </div>
             <div class="form-group">
                 <label for="signupPassword">Password</label>
                 <div class="input-group">
                     <input type="password" id="signupPassword" required>
                     <i class="fas fa-lock"></i>
-                    <button type="button" class="password-toggle" onclick="">
+                    <button type="button" class="password-toggle" onclick="togglePassword('signupPassword')">
                         <i class="fas fa-eye"></i>
                     </button>
                 </div>
-                <div class="error-message"></div>
+                <div class="error-message" id="signupPasswordError"></div>
             </div>
-            <button type="submit">Sign Up</button>
+            <button type="submit" id="signupButton">Sign Up</button>
         </form>
         <div class="switch-form">
-            <p>Already on MovieFlix?<a href="#" onclick="">Sign in</a></p>
+            <p>Already on MovieFlix?<a href="#" onclick="toggleForms()">Sign in</a></p>
         </div>
     </div>
 </div>
+<script src="../js/authentication.js"></script>
 </body>
 </html>
