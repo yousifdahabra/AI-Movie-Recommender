@@ -98,38 +98,37 @@ input:focus {
     cursor: pointer;
 }
 
-/*button[type="submit"] {*/
-/*    height: 48px;*/
-/*    background: #e50914;*/
-/*    color: white;*/
-/*    border: none;*/
-/*    border-radius: 8px;*/
-/*    font-size: 15px;*/
-/*    cursor: pointer;*/
-/*}*/
+button[type="submit"] {
+    height: 48px;
+    background: #e50914;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
 
-/*.error-message {*/
-/*    color: #ff4d4d;*/
-/*    font-size: 12px;*/
-/*    display: none;*/
-/*    margin-top: 4px;*/
-/*}*/
+.error-message {
+    color: #ff4d4d;
+    font-size: 12px;
+    display: none;
+    margin-top: 4px;
+}
 
-/*.switch-form {*/
-/*    text-align: center;*/
-/*    margin-top: 32px;*/
-/*    padding-top: 24px;*/
-/*    border-top: 1px solid #333;*/
-/*}*/
+.switch-form {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #333;
+}
 
-/*.switch-form p {*/
-/*    color: #9ca3af;*/
-/*    font-size: 14px;*/
-/*}*/
+.switch-form p {
+    color: #9ca3af;
+    font-size: 14px;
+}
 
-/*.switch-form a {*/
-/*    color: #e50914;*/
-/*    text-decoration: none;*/
-/*    margin-left: 4px;*/
-/*}
-*/
+.switch-form a {
+    color: #e50914;
+    text-decoration: none;
+    margin-left: 4px;
+}
