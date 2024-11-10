@@ -13,37 +13,69 @@
         <div>
             <div>
                 <h1>MovieFlix</h1>
-                <p>Create an account</p>
+                <p>Welcome back</p>
             </div>
-            <form id="signupForm">
+            <form onsubmit="">
                 <div>
-                    <label for="signupName">Name</label>
+                    <label>Email</label>
                     <div>
-                        <input type="text" id="signupName" required>
-                        <i class="fas fa-user"></i>
+                        <input type="email" required autocomplete="email">
+
                     </div>
-                    <div id="signupNameError"></div>
+                    <div></div>
                 </div>
                 <div>
-                    <label for="signupEmail">Email</label>
+                    <label>Password</label>
                     <div>
-                        <input type="email" id="signupEmail" required autocomplete="email">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div id="signupEmailError"></div>
-                </div>
-                <div>
-                    <label for="signupPassword">Password</label>
-                    <div>
-                        <input type="password" id="signupPassword" required>
-                        <i class="fas fa-lock"></i>
-                        <button type="button" tabindex="-1">
-                            <i class="fas fa-eye"></i>
+                        <input type="password" required>
+                        <i></i>
+                        <button type="button">
+                            <i></i>
                         </button>
                     </div>
-                    <div id="signupPasswordError"></div>
+                    <div></div>
                 </div>
-                <button type="submit" id="signupButton">Sign Up</button>
+                <button type="submit">Sign In</button>
+            </form>
+            <div>
+                <p>New to MovieFlix?<a href="#">Sign up now</a></p>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <h1>MovieFlix</h1>
+                <p>Create an account</p>
+            </div>
+            <form>
+                <div>
+                    <label>Name</label>
+                    <div>
+                        <input type="text" required>
+                        <i></i>
+                    </div>
+                    <div></div>
+                </div>
+                <div>
+                    <label>Email</label>
+                    <div>
+                        <input type="email" required autocomplete="email">
+                        <i></i>
+                    </div>
+                    <div></div>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <div>
+                        <input type="password" required>
+                        <i></i>
+                        <button type="button">
+                            <i></i>
+                        </button>
+                    </div>
+                    <div></div>
+                </div>
+                <button type="submit">Sign Up</button>
             </form>
             <div>
                 <p>Already on MovieFlix?<a href="#">Sign in</a></p>
