@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url("../../assets/authentication/background.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.container {
+    background: #171717;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.form {
+    display: none;
+    padding: 40px;
+}
+
+.form.active {
+    display: block;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+h1 {
+    color: #e50914;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+label {
+    color: #e5e7eb;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-group {
+    position: relative;
+}
+
+input {
+    width: 100%;
+    height: 48px;
+    background: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    padding: 0 40px 0 44px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #e50914;
+}
+
+.input-group i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    height: 48px;
+    background: #e50914;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 12px;
+    display: none;
+    margin-top: 4px;
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #333;
+}
+
+.switch-form p {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.switch-form a {
+    color: #e50914;
+    text-decoration: none;
+    margin-left: 4px;
+}
