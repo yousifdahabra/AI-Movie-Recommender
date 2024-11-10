@@ -14,7 +14,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: rgba(32, 32, 32, 0.95);
+    background-color: rgba(27, 26, 26, 0.95);
     width: 100%;
     position: fixed;
     top: 0;
@@ -79,6 +79,7 @@ body {
     width: 32px;
     height: 32px;
     background-color: #2a2a2a;
+    color: #c6c6c6;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
@@ -119,7 +120,8 @@ body {
 }
 
 .hero-section {
-    height: 100vh;
+    height: calc(100vh - 70px);
+    margin-top: 66px;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../../assets/header/background.jpg') center/cover no-repeat;
     display: flex;
