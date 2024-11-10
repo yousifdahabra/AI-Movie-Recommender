@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Authentication</title>
+</head>
+<body>
+<div>
+    <div>
+        <div>
+            <div>
+                <h1>MovieFlix</h1>
+                <p>Create an account</p>
+            </div>
+            <form id="signupForm">
+                <div>
+                    <label for="signupName">Name</label>
+                    <div>
+                        <input type="text" id="signupName" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div id="signupNameError"></div>
+                </div>
+                <div>
+                    <label for="signupEmail">Email</label>
+                    <div>
+                        <input type="email" id="signupEmail" required autocomplete="email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div id="signupEmailError"></div>
+                </div>
+                <div>
+                    <label for="signupPassword">Password</label>
+                    <div>
+                        <input type="password" id="signupPassword" required>
+                        <i class="fas fa-lock"></i>
+                        <button type="button" tabindex="-1">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div id="signupPasswordError"></div>
+                </div>
+                <button type="submit" id="signupButton">Sign Up</button>
+            </form>
+            <div>
+                <p>Already on MovieFlix?<a href="#">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
