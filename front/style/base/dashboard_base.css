@@ -27,3 +27,10 @@ body{
 .normal-text{
     color: grey;
 }
+.hidden{
+    display: none !important;
+}
+
+.show{
+    display: block !important;
+}
