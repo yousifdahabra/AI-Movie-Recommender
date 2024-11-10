@@ -1,0 +1,117 @@
+
+body {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F1F1F;
+    font-family:'Rufina',serif; 
+}
+.width70{
+    width:70%;
+}
+.width100{
+    width:100%;
+}
+.on-line {
+    margin: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1F1F1F;
+}
+
+.on-col {
+    display: flex;
+    flex-direction: column;
+    justify-content:stretch;
+    
+    text-align: center; 
+}
+
+.on-col p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+.on-col h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #B40000;
+}
+
+.avengers-img {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.movies-section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-item {
+    text-align: center;
+    color: #333;
+}
+
+.movie-item img {
+    width: 100%; 
+    border-radius: 8px;
+}
+.avengers-img img {
+    width: 60%; 
+    height: auto;
+    border-radius: 20px;
+    border: 0.5px solid #ffffff;
+    box-shadow: 0 4px 2px rgb(206, 206, 206);
+}
+.on-col img{
+    width: 100%; 
+    height: auto;
+    border-radius: 20px;
+}
+.button {
+    background-color: #B40000;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.color-white{
+    color:white;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    background-color: #B40000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #590d0d;
+}
+.pagination button:disabled {
+    background-color: #B40000;
+    cursor: not-allowed;
+}
+.primary-color{
+    color:#B40000
+}
+.primary-back{
+    color:#B40000
+}
