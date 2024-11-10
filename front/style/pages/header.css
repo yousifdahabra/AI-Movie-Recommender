@@ -117,3 +117,22 @@ body {
     background-color: #3a3a3a;
     color: #e50914;
 }
+
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-right {
+        gap: 0.8rem;
+    }
+}
