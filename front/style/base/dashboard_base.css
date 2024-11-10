@@ -1,0 +1,25 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 100%;
+    overflow-x: hidden;  
+}
+
+
+
+/* Color */
+.text-color{
+    color: #D62020;
+}
+
+.background-color{
+    background-color: #202124;
+}
+.second-background-color{
+
+}
