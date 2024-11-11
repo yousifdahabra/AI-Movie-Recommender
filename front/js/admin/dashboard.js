@@ -12,10 +12,13 @@ const get_users = async () => {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     });
-    console.log(post_method)
     return post_method.data;
   } catch (error) {
     return [];
   }
 };
-get_users()
+const update_table = async  () =>{
+    const users = await get_users() ;
+    await update_table_wait(users)
+}
+
