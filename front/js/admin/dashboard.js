@@ -28,4 +28,21 @@ const update_table_wait = (users) =>{
       table_body.innerHTML = `<td colspan="7">No data</td>`
       return
     }
+    let body = ``;
+    users.forEach((user, index) => {
+      body+=`
+      <tr>
+          <td>${user.full_name}</td>
+          <td>${user.username } $</td>
+          <td>0</td>
+          <td>${user.is_active}</td>
+          <td>${user.role}</td>
+          <td>${user.create_date}</td>
+          <td>
+              <button data-id="${user.user_id }" class="banned-btn view"  >set it banned</button>
+          </td>
+      </tr>
+      `;
+
+    })
 }
