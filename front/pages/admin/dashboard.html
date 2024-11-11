@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../../style/base/flex.css">
+    <link rel="stylesheet" href="../../style/base/dashboard_base.css">
+    <link rel="stylesheet" href="../../style/pages/dashboard.css">
+    <link rel="stylesheet" href="../../style/fontawesome/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <header class="flex justify-content-space-between align-items-center background-color header-dashboard">
+        <div class="logo-section flex align-items-center">
+            <div class="logo text-color">Admin Dashboard</div>
+        </div>
+    </header>
+
+    <div class="flex dashboard-main-container">
+        <div class="dashboard-nav-container">
+            <nav class="flex flex-direction-column justify-content-space-between second-background-color dashboard-nav">
+                <div class="dashboard-nav-options">
+                    <a href="#" class="dashboard-nav-option active">
+                        <i class="fa fa-tachometer" aria-hidden="true"></i>
+                        <h3> Dashboard</h3>
+                    </a>
+                    <a id="logout_btn" href="#" class="dashboard-nav-option normal-text">
+                        <i class="fa fa-tachometer" aria-hidden="true"></i>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+            </nav>   
+        </div>
+        <div class="dashboard-main">
+
+            <div class="flex justify-content-evenly align-items-center justify-content-space-around flex-wrap box-container ">
+                <div class="flex align-items-center justify-content-space-between box ">
+                    <div class="topic">
+                        <h2 id="users" class="topic-heading ">0</h2>
+                        <h2 class="topic-title">Users</h2>
+                    </div>
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                </div>
+
+                <div class="flex align-items-center justify-content-space-between box ">
+                    <div class="topic">
+                        <h2 id="movies" class="topic-heading">0</h2>
+                        <h2 class="topic-title">Movies</h2>
+                    </div>
+                    <i class="fa fa-film" aria-hidden="true"></i>
+                </div>
+
+                <div class="flex align-items-center justify-content-space-between box ">
+                    <div class="topic">
+                        <h2 id="bookmarks" class="topic-heading">0</h2>
+                        <h2 class="topic-title">Bookmarks</h2>
+                    </div>
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="report-container">
+                <div class="report-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Username</th>
+                                <th>Total Bookmarks</th>
+                                <th>Status</th>
+                                <th>Role</th>
+                                <th>Create Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body">
+                            <tr>
+                                <td>Carly Frazier</td>
+                                <td>carly_frazier</td>
+                                <td>10</td>
+                                <td>Active</td>
+                                <td>User</td>
+                                <td>11-11-2024</td>
+                                <td>set it banned</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="disable_user_form_model" class="modal hidden">
+        <div class="modal-content">
+            <div class=" form align-items-center flex flex-direction-column ">
+                <input id="disable_id" type="hidden" value="0"/>
+
+                <div class=" flex flex-wrap-nowrap align-items-start  form-group">
+                    <h2>Are you sure?</h2>
+                </div>
+                <div class=" flex flex-wrap-nowrap align-items-start  form-group">
+                    <button id="close_disable_form_btn" class="view" type="button">Close</button>
+                    <button id="submit_disable_form" class="view" type="button">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/admin/dashboard.js"></script>
+</body>
+</html>

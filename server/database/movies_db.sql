@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:4308
--- Generation Time: Nov 10, 2024 at 06:53 PM
+-- Generation Time: Nov 11, 2024 at 02:13 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -173,9 +173,9 @@ CREATE TABLE `users_tbl` (
   `full_name` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` mediumtext NOT NULL,
-  `role` enum('admin','normal') NOT NULL,
+  `role` enum('admin','normal') NOT NULL DEFAULT 'normal',
   `create_date` datetime NOT NULL DEFAULT current_timestamp(),
-  `is_active` varchar(45) NOT NULL
+  `is_active` tinyint(4) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -256,7 +256,7 @@ ALTER TABLE `movies_tbl`
 -- AUTO_INCREMENT for table `users_tbl`
 --
 ALTER TABLE `users_tbl`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
