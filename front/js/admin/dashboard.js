@@ -23,3 +23,9 @@ const update_table = async  () =>{
     await update_table_wait(users)
 }
 
+const update_table_wait = (users) =>{
+    if(users.states == 0){
+      table_body.innerHTML = `<td colspan="7">No data</td>`
+      return
+    }
+}
