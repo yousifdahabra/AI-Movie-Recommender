@@ -7,6 +7,7 @@ const get_users = async () => {
       url: "../../../server/admin/dashboard.php",
       data: {
         get_users: "true",
+        
       },
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
