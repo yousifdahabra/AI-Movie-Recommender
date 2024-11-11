@@ -10,3 +10,12 @@ function addMessage(message, isUser) {
     chatMessages.appendChild(messageDiv);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
+
+function showTypingIndicator() {
+    typingIndicator.style.display = 'block';
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function hideTypingIndicator() {
+    typingIndicator.style.display = 'none';
+}
