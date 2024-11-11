@@ -4,7 +4,7 @@ const get_users = async () => {
   try {
     const post_method = await axios({
       method: "post",
-      url: "#",
+      url: "../../../server/admin/dashboard.php",
       data: {
         get_users: "true",
       },
@@ -12,8 +12,10 @@ const get_users = async () => {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     });
+    console.log(post_method)
     return post_method.data;
   } catch (error) {
     return [];
   }
 };
+get_users()
