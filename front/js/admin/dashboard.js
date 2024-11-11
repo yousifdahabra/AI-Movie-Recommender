@@ -29,11 +29,11 @@ const update_table_wait = (users) =>{
       return
     }
     let body = ``;
-    users.forEach((user, index) => {
+    users.result.forEach((user, index) => {
       body+=`
       <tr>
           <td>${user.full_name}</td>
-          <td>${user.username } $</td>
+          <td>${user.username }</td>
           <td>0</td>
           <td>${user.is_active}</td>
           <td>${user.role}</td>
