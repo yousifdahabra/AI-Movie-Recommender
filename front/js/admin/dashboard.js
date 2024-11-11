@@ -43,6 +43,7 @@ const update_table_wait = (users) =>{
           </td>
       </tr>
       `;
-
+      table_body.innerHTML = body
     })
 }
+update_table()
