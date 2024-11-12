@@ -39,10 +39,20 @@ const update_table_wait = (users) =>{
           <td>${user.role}</td>
           <td>${user.create_date}</td>
           <td>
-              <button data-id="${user.user_id }" class="banned-btn view"  >set it banned</button>
+              <button data-id="${user.user_id }" class="banned-btn view"  >Unactive</button>
           </td>
       </tr>
       `;
+      const banned_btn = document.querySelectorAll(".banned-btn");
+      banned_btn.forEach((banned_btn) => {
+        banned_btn.addEventListener("click", (event) => {
+            const id = event.target.getAttribute('data-id');
+
+          });
+    });
+
+
+
       table_body.innerHTML = body
     })
 }
