@@ -48,3 +48,14 @@ async function sendMessage(message) {
         addMessage('Try again', false);
     }
 }
+
+function handleSubmit() {
+    const message = userInput.value.trim();
+    if (message) {
+        addMessage(message, true);
+        userInput.value = '';
+        sendMessage(message);
+    }
+}
+
+sendButton.addEventListener('click', handleSubmit);
