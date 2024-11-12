@@ -47,7 +47,7 @@ async function sendMessage(message) {
         });
 
         if (!response.ok) {
-            throw new Error('API request failed');
+            new Error('API request failed');
         }
 
         const data = await response.json();
