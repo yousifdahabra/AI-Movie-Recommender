@@ -19,3 +19,32 @@ function showTypingIndicator() {
 function hideTypingIndicator() {
     typingIndicator.style.display = 'none';
 }
+
+async function sendMessage(message) {
+    try {
+        showTypingIndicator();
+
+        const response = await fetch(API_ENDPOINT, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${API_KEY}`
+            },
+            body: JSON.stringify({
+                message: message
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('API request failed');
+        }
+
+        const data = await response.json();
+        hideTypingIndicator();
+        addMessage(data.response, false);
+    } catch (error) {
+        console.error('Error:', error);
+        hideTypingIndicator();
+        addMessage('Try again', false);
+    }
+}
