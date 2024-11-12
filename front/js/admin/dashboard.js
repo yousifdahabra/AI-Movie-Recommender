@@ -1,5 +1,12 @@
 const table_body = document.getElementById("table_body");
 const disable_user_form_model = document.getElementById("disable_user_form_model");
+const close_disable_form_btn = document.getElementById("close_disable_form_btn");
+
+
+close_disable_form_btn.addEventListener("click",()=>{
+  disable_user_form_model.classList.add('hidden')
+  disable_user_form_model.classList.remove('show')
+})
 
 const get_users = async () => {
   try {
@@ -40,7 +47,7 @@ const update_table_wait = (users) =>{
           <td>${user.role}</td>
           <td>${user.create_date}</td>
           <td>
-              <button data-id="${user.user_id}" class="banned-btn view"  >Unactive</button>
+              <button data-id="${user.user_id}" class="banned-btn view"  >Inactive</button>
           </td>
       </tr>
       `;
