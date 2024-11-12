@@ -19,12 +19,13 @@ const inactive_user = async (user_id) => {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     });
+    console.log(post_method)
     return post_method.data;
   } catch (error) {
     return [];
   }
 };
-const get_user = async () => {
+const get_users = async () => {
   try {
     const post_method = await axios({
       method: "post",
@@ -55,6 +56,7 @@ const update_table_wait = (users) =>{
     }
     let body = ``;
     users.result.forEach((user, index) => {
+      let status = user.is_active == 1 ? "Active":"Inactive";
       body+=`
       <tr>
           <td>${user.full_name}</td>
@@ -64,7 +66,7 @@ const update_table_wait = (users) =>{
           <td>${user.role}</td>
           <td>${user.create_date}</td>
           <td>
-              <button data-id="${user.user_id}" class="banned-btn view"  >Inactive</button>
+              <button data-id="${user.user_id}" class="banned-btn view ${status}"  >${status}</button>
           </td>
       </tr>
       `;
@@ -91,9 +93,10 @@ close_disable_form_btn.addEventListener("click",()=>{
 })
 submit_disable_form.addEventListener("click",()=>{
   const disable_id =  disable_id_element.value
-
+  inactive_user(disable_id);
   disable_user_form_model.classList.add('hidden')
   disable_user_form_model.classList.remove('show')
+  update_table()
 })
 
 update_table()
