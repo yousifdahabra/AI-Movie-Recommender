@@ -71,3 +71,9 @@ function handleSubmit() {
 }
 
 sendButton.addEventListener('click', handleSubmit);
+
+userInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        handleSubmit();
+    }
+});
