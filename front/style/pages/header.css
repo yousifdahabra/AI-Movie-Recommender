@@ -79,6 +79,7 @@ body {
     width: 32px;
     height: 32px;
     background-color: #2a2a2a;
+    color: white;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
@@ -130,7 +131,7 @@ body {
 .trending-tag {
     display: inline-block;
     background-color: #e50914;
-    color: white;
+    color: #000000;
     padding: 0.8rem 2rem;
     border-radius: 4px;
     font-size: 1.2rem;

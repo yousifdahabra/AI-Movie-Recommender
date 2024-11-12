@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>profile</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/pages/profile.css">
+<body>
+<div class="container">
+    <h1 class="title">Profile</h1>
+    <form id="profileForm" onsubmit="return false;">
+        <div class="form-group">
+            <label for="oldPassword">Current Password</label>
+            <div class="input-group">
+                <input type="password" id="oldPassword" required>
+                <i class="fas fa-lock"></i>
+            </div>
+            <div class="error-message" id="oldPasswordError">Incorrect current password</div>
+        </div>
+
+        <div class="form-group">
+            <label for="newName">New Name</label>
+            <div class="input-group">
+                <input type="text" id="newName" disabled>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="error-message" id="newNameError">Please enter a new name</div>
+        </div>
+
+        <div class="form-group">
+            <label for="newEmail">New Email</label>
+            <div class="input-group">
+                <input type="email" id="newEmail" disabled>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="error-message" id="newEmailError">Please enter a valid email</div>
+        </div>
+
+        <div class="form-group">
+            <label for="newPassword">New Password</label>
+            <div class="input-group">
+                <input type="password" id="newPassword" disabled>
+                <i class="fas fa-lock"></i>
+            </div>
+            <div class="error-message" id="newPasswordError">Password must be at least 6 characters</div>
+        </div>
+
+        <button type="submit" id="saveButton" onclick="handleSave()" disabled>Save Changes</button>
+    </form>
+    <script src="../js/profile.js"></script>
+</div>
+</body>
+</html>
