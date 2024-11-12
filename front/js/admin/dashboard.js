@@ -1,4 +1,5 @@
 const table_body = document.getElementById("table_body");
+const disable_user_form_model = document.getElementById("disable_user_form_model");
 
 const get_users = async () => {
   try {
@@ -49,7 +50,9 @@ const update_table_wait = (users) =>{
       banned_btns.forEach((banned_btn) => {
         banned_btn.addEventListener("click", (event) => {
             const id = event.target.getAttribute('data-id');
-            console.log(id)
+            disable_user_form_model.classList.add('show')
+            disable_user_form_model.classList.remove('hidden')
+            document.getElementById("disable_id").value = id
           });
       });
 
