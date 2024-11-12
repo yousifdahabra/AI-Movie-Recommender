@@ -5,16 +5,26 @@ const submit_disable_form = document.getElementById("submit_disable_form");
 const disable_id_element = document.getElementById("disable_id");
 
 
-close_disable_form_btn.addEventListener("click",()=>{
-  disable_user_form_model.classList.add('hidden')
-  disable_user_form_model.classList.remove('show')
-})
-submit_disable_form.addEventListener("click",()=>{
-  const disable_id =  disable_id_element.value
 
-})
-
-const get_users = async () => {
+const inactive_user = async (user_id) => {
+  try {
+    const post_method = await axios({
+      method: "post",
+      url: "../../../server/admin/dashboard.php",
+      data: {
+        update_status_users: "true",
+        user_id:user_id,
+      },
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    });
+    return post_method.data;
+  } catch (error) {
+    return [];
+  }
+};
+const get_user = async () => {
   try {
     const post_method = await axios({
       method: "post",
@@ -32,6 +42,7 @@ const get_users = async () => {
     return [];
   }
 };
+
 const update_table = async  () =>{
     const users = await get_users() ;
     await update_table_wait(users)
@@ -73,4 +84,16 @@ const update_table_wait = (users) =>{
 
     })
 }
+
+close_disable_form_btn.addEventListener("click",()=>{
+  disable_user_form_model.classList.add('hidden')
+  disable_user_form_model.classList.remove('show')
+})
+submit_disable_form.addEventListener("click",()=>{
+  const disable_id =  disable_id_element.value
+
+  disable_user_form_model.classList.add('hidden')
+  disable_user_form_model.classList.remove('show')
+})
+
 update_table()
