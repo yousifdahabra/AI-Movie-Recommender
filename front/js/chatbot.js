@@ -1,3 +1,7 @@
+const API_KEY = "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";
+const API_ENDPOINT = "https://api.openai.com/v1/chat/completions";
+const prompt = "You are called Movie Wizard. You can only answer questions about movies or summarize movie plots. Do not provide any other information."
+
 const chatMessages = document.getElementById('chat-messages');
 const userInput = document.getElementById('user-input');
 const sendButton = document.getElementById('send-button');
@@ -31,7 +35,14 @@ async function sendMessage(message) {
                 'Authorization': `Bearer ${API_KEY}`
             },
             body: JSON.stringify({
-                message: message
+                model: "gpt-3.5-turbo",
+                messages: [{
+                    role: "system",
+                    content: prompt,
+                }, {
+                    role: "user",
+                    content: message
+                }],
             })
         });
 
@@ -40,8 +51,9 @@ async function sendMessage(message) {
         }
 
         const data = await response.json();
+        console.log(data.choices[0].message.content);
         hideTypingIndicator();
-        addMessage(data.response, false);
+        addMessage(data.choices[0].message.content, false);
     } catch (error) {
         console.error('Error:', error);
         hideTypingIndicator();
