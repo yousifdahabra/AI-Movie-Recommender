@@ -39,21 +39,22 @@ const update_table_wait = (users) =>{
           <td>${user.role}</td>
           <td>${user.create_date}</td>
           <td>
-              <button data-id="${user.user_id }" class="banned-btn view"  >Unactive</button>
+              <button data-id="${user.user_id}" class="banned-btn view"  >Unactive</button>
           </td>
       </tr>
       `;
-      const banned_btn = document.querySelectorAll(".banned-btn");
-      banned_btn.forEach((banned_btn) => {
+      table_body.innerHTML = body
+
+      const banned_btns = document.querySelectorAll(".banned-btn");
+      banned_btns.forEach((banned_btn) => {
         banned_btn.addEventListener("click", (event) => {
             const id = event.target.getAttribute('data-id');
-
+            console.log(id)
           });
-    });
+      });
 
 
 
-      table_body.innerHTML = body
     })
 }
 update_table()
