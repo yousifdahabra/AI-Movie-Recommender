@@ -7,6 +7,9 @@ body {
     background-color: #1F1F1F;
     font-family:'Rufina',serif; 
 }
+.primary-title{
+    font-size: xx-large;
+}
 .width70{
     width:70%;
 }
@@ -26,8 +29,7 @@ body {
 .on-col {
     display: flex;
     flex-direction: column;
-    justify-content:stretch;
-    
+    justify-content:space-evenly;
     text-align: center; 
 }
 
