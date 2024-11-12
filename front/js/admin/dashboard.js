@@ -1,11 +1,17 @@
 const table_body = document.getElementById("table_body");
 const disable_user_form_model = document.getElementById("disable_user_form_model");
 const close_disable_form_btn = document.getElementById("close_disable_form_btn");
+const submit_disable_form = document.getElementById("submit_disable_form");
+const disable_id_element = document.getElementById("disable_id");
 
 
 close_disable_form_btn.addEventListener("click",()=>{
   disable_user_form_model.classList.add('hidden')
   disable_user_form_model.classList.remove('show')
+})
+submit_disable_form.addEventListener("click",()=>{
+  const disable_id =  disable_id_element.value
+
 })
 
 const get_users = async () => {
