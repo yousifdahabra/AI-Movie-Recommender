@@ -3,6 +3,11 @@ const disable_user_form_model = document.getElementById("disable_user_form_model
 const close_disable_form_btn = document.getElementById("close_disable_form_btn");
 const submit_disable_form = document.getElementById("submit_disable_form");
 const disable_id_element = document.getElementById("disable_id");
+const users_ele = document.getElementById("users");
+const movies = document.getElementById("movies");
+const bookmarks = document.getElementById("bookmarks");
+
+
 
 
 
@@ -54,6 +59,9 @@ const update_table_wait = (users) =>{
       table_body.innerHTML = `<td colspan="7">No data</td>`
       return
     }
+    users_ele.innerHTML = users.total_users;
+    movies.innerHTML = users.total_movies;
+    bookmarks.innerHTML = users.total_bookmarks;
     let body = ``;
     users.result.forEach((user, index) => {
       let status = user.is_active == 1 ? "Active":"Inactive";
