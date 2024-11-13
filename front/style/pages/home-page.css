@@ -24,7 +24,7 @@ body{
 
 .movie-card{
     position: relative;
-    width: 280px;
+    width: 250px;
     height: 400px;
     margin: 15px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
@@ -105,12 +105,11 @@ body{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 245px;
+    max-width: 235px;
 }
 .movies-section-title {
     font-size: 2em;
     color: #fff;
-    margin: 0 auto 20px;
 }
 .movies-section-title.text-left {
     text-align: left;
@@ -120,10 +119,18 @@ body{
 
 .movies-section-btn {
     font-size: 20px;
-    margin: 0 auto 20px;
     padding: 6px 20px;
-    background-color: #D62020;
-    color: #000000;
+    color: #D62020;
     border-radius: 15px;
-    margin-top: 20px;
+    text-decoration:none;
+    transition: all 1s ease-in-out;
+
+}
+.movies-section-btn:hover{
+    color: black;
+    background-color: #D62020 ;
+    transition: all 0.8s ease-in-out;
+}
+.movies-section-head{
+    gap: 500px;
 }
