@@ -50,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $updateStmt->bind_param("ssi", $newName, $hashedPassword, $userId);
 
     if ($updateStmt->execute()) {
+
         $_SESSION['full_name'] = $newName;
 
         echo json_encode([
