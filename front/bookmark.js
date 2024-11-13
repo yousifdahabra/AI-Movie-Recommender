@@ -1,5 +1,5 @@
 function loadBookmarks() {
-    fetch('/back-end/get_bookmarks.php?user_id=' + loggedInUserId)
+    fetch('get_bookmarks.php')
     .then(response => response.json())
     .then(data => {
         const bookmarksSection = document.getElementById('bookmarks-section');
