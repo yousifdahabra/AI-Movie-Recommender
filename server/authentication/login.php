@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = json_decode(file_get_contents("php://input"), true);
     $email = $data['email'] ?? '';
     $password = $data['password'] ?? '';
-
+    
     if (empty($email) || empty($password)) {
         echo json_encode([
             "success" => false,
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
-
+        
         if ($user['is_active'] == 0) {
             echo json_encode([
                 "success" => false,
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['full_name'] = $user['full_name'];
             $_SESSION['role'] = $user['role'];
-
+            
             echo json_encode([
                 "success" => true,
                 "user" => [
@@ -52,5 +52,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 "message" => "invalid password"
             ]);
         }
+    } else {
+        echo json_encode([
+            "success" => false,
+            "message" => "invalid username"
+        ]);
     }
+    
+    $stmt->close();
+} else {
+    echo json_encode([
+        "success" => false,
+        "message" => "Invalid request method"
+    ]);
 }
+?>
