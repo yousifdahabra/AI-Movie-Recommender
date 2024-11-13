@@ -32,5 +32,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ]);
             exit;
         }
+
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['user_id'] = $user['user_id'];
+            $_SESSION['full_name'] = $user['full_name'];
+            $_SESSION['role'] = $user['role'];
+
+            echo json_encode([
+                "success" => true,
+                "user" => [
+                    "id" => $user['user_id'],
+                    "full_name" => $user['full_name'],
+                    "role" => $user['role']
+                ]
+            ]);
+        } else {
+            echo json_encode([
+                "success" => false,
+                "message" => "invalid password"
+            ]);
+        }
     }
 }
