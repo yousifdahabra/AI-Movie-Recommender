@@ -12,6 +12,7 @@
 <div class="container">
     <h1 class="title">Profile</h1>
     <form id="profileForm" onsubmit="return false;">
+
         <div class="form-group">
             <label for="oldPassword">Current Password</label>
             <div class="input-group">
@@ -31,18 +32,9 @@
         </div>
 
         <div class="form-group">
-            <label for="newEmail">New Email</label>
-            <div class="input-group">
-                <input type="email" id="newEmail" disabled>
-                <i class="fas fa-envelope"></i>
-            </div>
-            <div class="error-message" id="newEmailError">Please enter a valid email</div>
-        </div>
-
-        <div class="form-group">
             <label for="newPassword">New Password</label>
             <div class="input-group">
-                <input type="password" id="newPassword" disabled>
+                <input type="password" id="newPassword">
                 <i class="fas fa-lock"></i>
             </div>
             <div class="error-message" id="newPasswordError">Password must be at least 6 characters</div>
