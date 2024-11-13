@@ -1,11 +1,8 @@
-const moviesSection = document.getElementById("movies-section");
-const pagination = document.getElementById("pagination");
-
-const movieData = Array(250).fill({
+let moviesSection = document.getElementById('movies-section');
+const movieData = Array(50).fill({
     imgSrc: "https://i.pinimg.com/originals/a9/2a/ff/a92aff5991e20fb22eed9a7e4b3246f0.jpg",
     name: "Avengers: End Game"
 });
-
 const itemsPerPage = 18;
 const totalPages = Math.ceil(movieData.length / itemsPerPage);
 let currentPage = 1;
