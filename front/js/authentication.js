@@ -2,6 +2,7 @@ const loginForm = document.getElementById('loginForm');
 const signupForm = document.getElementById('signupForm');
 
 loginForm.addEventListener('submit', handleLogin);
+signupForm.addEventListener('submit', handleSignup);
 
 async function handleLogin(event) {
     event.preventDefault();
