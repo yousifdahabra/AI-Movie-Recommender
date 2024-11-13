@@ -1,7 +1,7 @@
 <?php 
 include "../conection.php";
 
-$mvoies_query = $conection->prepare("Select * from movies_tbl");
+$mvoies_query = $conection->prepare("Select * from movies_tbl  limit 4");
 $mvoies_query->execute();
 $get_movies = $mvoies_query->get_result();
 $movies_array = [];

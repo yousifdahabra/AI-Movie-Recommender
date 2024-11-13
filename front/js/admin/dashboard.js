@@ -15,7 +15,7 @@ const inactive_user = async (user_id) => {
   try {
     const post_method = await axios({
       method: "post",
-      url: "../../../server/admin/dashboard.php",
+      url: "http://localhost/AI-Movie-Recommender/server/admin/dashboard.php",
       data: {
         update_status_users: "true",
         user_id:user_id,
@@ -34,7 +34,7 @@ const get_users = async () => {
   try {
     const post_method = await axios({
       method: "post",
-      url: "../../../server/admin/dashboard.php",
+      url: "http://localhost/AI-Movie-Recommender/server/admin/dashboard.php",
       data: {
         get_users: "true",
         
