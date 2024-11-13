@@ -10,6 +10,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fullName = $data['fullName'] ?? '';
     $username = $data['username'] ?? '';
     $password = $data['password'] ?? '';
+
+    if (empty($fullName) || empty($username) || empty($password)) {
+        echo json_encode([
+            "success" => false,
+            "message" => "All fields are required"
+        ]);
+        exit;
+    }
 } else {
     echo json_encode([
         "success" => false,
