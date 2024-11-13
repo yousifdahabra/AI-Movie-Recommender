@@ -31,6 +31,10 @@ function displayPage(page) {
             <img src="${movie.movie_image}" alt="${movie.movie_title}" >
             <p class="color-white">${movie.movie_title}</p>
         `;
+        movieItem.addEventListener('click',()=>{
+            localStorage.setItem('selected',JSON.stringify(movie));
+            window.location.href = "movie-page.html";})
+
         moviesContainer.appendChild(movieItem);
     });
 }
