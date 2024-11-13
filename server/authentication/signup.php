@@ -18,6 +18,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
         exit;
     }
+
+    $stmt = $conection->prepare("SELECT user_id FROM users_tbl WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+
+    if ($stmt->get_result()->num_rows > 0) {
+        echo json_encode([
+            "success" => false,
+            "message" => "username already exists"
+        ]);
+        $stmt->close();
+        exit;
+    }
 } else {
     echo json_encode([
         "success" => false,
