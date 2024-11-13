@@ -6,8 +6,8 @@ document.getElementById('movie-release-date').innerText = selected.movie_release
 
 let addBookmark=document.getElementById('add-bookmark');
 addBookmark.addEventListener('click',()=>{
-    addBookmarktoDB()
+    addBookmarktoDB(selected.movie_id)
 })
-function addBookmarktoDB(){
+function addBookmarktoDB(movieId){
 
 }
