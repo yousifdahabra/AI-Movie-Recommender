@@ -10,4 +10,28 @@ addBookmark.addEventListener('click',()=>{
 })
 function addBookmarktoDB(movieId){
 
+    
+    const userId = 1;
+    fetch('bookmark_movie.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            user_id: userId,
+            movie_id: movieId
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            const button = document.querySelector(`[data-movie-id="${movieId}"] .bookmark-btn`);
+            button.innerText = data.isBookmarked ? 'Remove Bookmark' : 'Bookmark';
+        } else {
+            alert('Error: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
