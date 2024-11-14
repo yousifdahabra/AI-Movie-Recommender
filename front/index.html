@@ -8,80 +8,36 @@
     <link rel="stylesheet" href="./style/base/color.css">
     <link rel="stylesheet" href="./style/base/flex.css">
     <link rel="stylesheet" href="./style/base/base.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body class="page-background">
 
 
     <section class="movies-section flex flex-direction-column flex-wrap ">
-        <div class="flex align-content-center justify-content-space-around flex-wrap movies-section-head">
-            <h1 class="main-title movies-section-title text-left">Trending</h1>
+        <div class="flex align-content-center justify-content-space-between flex-wrap movies-section-head">
+            <h1 class="main-title movies-section-title text-left">New</h1>
             <a href="#" class="movies-section-btn">Discover More</a>
         </div>
 
-        <div class="movies-cards justify-content-center flex flex-wrap align-content-center">
-            <div class="movie-card flex flex-direction-column flex-wrap align-content-center">
-                <div class="movies-image">
-                    <img src="../front/assets/home-page/movie-poster-1.jpg" alt="">
-                    <div class="movies-image-det flex flex-direction-column justify-content-center align-items-center">
-                        <button class="view-details">
-                            More Details
-                        </button>
-                    </div>
-                </div>
-                <div class="movie-info">
-                    <h2>movie title</h2>
-                    <p class="movie-category">action</p>
-                    <p class="movie-summary">The largest Egyptian pyramid, it served as the tomb of pharaoh Khufu, who ruled during the Fourth Dynasty of the Old Kingdom. The pyramid is the oldest of the Seven Wonders of the Ancient World, and the only wonder that has remained largely intact.</p>
-                </div>
-            </div>
-            <div class="movie-card flex flex-direction-column flex-wrap align-content-center">
-                <div class="movies-image">
-                    <img src="../front/assets/home-page/movie-poster-1.jpg" alt="">
-                    <div class="movies-image-det flex flex-direction-column justify-content-center align-items-center">
-                        <button class="view-details">
-                            More Details
-                        </button>
-                    </div>
-                </div>
-                <div class="movie-info">
-                    <h2>movie title</h2>
-                    <p class="movie-category">action</p>
-                    <p class="movie-summary">The largest Egyptian pyramid, it served as the tomb of pharaoh Khufu, who ruled during the Fourth Dynasty of the Old Kingdom. The pyramid is the oldest of the Seven Wonders of the Ancient World, and the only wonder that has remained largely intact.</p>
-                </div>
-            </div>
-            <div class="movie-card flex flex-direction-column flex-wrap align-content-center">
-                <div class="movies-image">
-                    <img src="../front/assets/home-page/movie-poster-1.jpg" alt="">
-                    <div class="movies-image-det flex flex-direction-column justify-content-center align-items-center">
-                        <button class="view-details">
-                            More Details
-                        </button>
-                    </div>
-                </div>
-                <div class="movie-info">
-                    <h2>movie title</h2>
-                    <p class="movie-category">action</p>
-                    <p class="movie-summary">The largest Egyptian pyramid, it served as the tomb of pharaoh Khufu, who ruled during the Fourth Dynasty of the Old Kingdom. The pyramid is the oldest of the Seven Wonders of the Ancient World, and the only wonder that has remained largely intact.</p>
-                </div>
-            </div>
-            <div class="movie-card flex flex-direction-column flex-wrap align-content-center">
-                <div class="movies-image">
-                    <img src="../front/assets/home-page/movie-poster-1.jpg" alt="">
-                    <div class="movies-image-det flex flex-direction-column justify-content-center align-items-center">
-                        <button class="view-details">
-                            More Details
-                        </button>
-                    </div>
-                </div>
-                <div class="movie-info">
-                    <h2>movie title</h2>
-                    <p class="movie-category">action</p>
-                    <p class="movie-summary">The largest Egyptian pyramid, it served as the tomb of pharaoh Khufu, who ruled during the Fourth Dynasty of the Old Kingdom. The pyramid is the oldest of the Seven Wonders of the Ancient World, and the only wonder that has remained largely intact.</p>
-                </div>
-            </div>
-
+        <div id="new_movies_cards" class="movies-cards justify-content-center flex flex-wrap align-content-center">
         </div>
     </section>
- 
+
+    <section class="movies-section flex flex-direction-column flex-wrap ">
+        <div class="flex align-content-center justify-content-space-between flex-wrap movies-section-head">
+            <h1 class="main-title movies-section-title text-left">Trend</h1>
+            <a href="#" class="movies-section-btn">Discover More</a>
+        </div>
+
+        <div id="trend_movies_cards" class="movies-cards justify-content-center flex flex-wrap align-content-center">
+        </div>
+    </section>
+
+
+
+    
+ <script src="http://localhost/AI-Movie-Recommender/front//js/home_page.js"></script>
+ <script src="./js/commn.js"></script>
+
 </body>
 </html>
