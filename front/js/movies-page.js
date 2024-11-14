@@ -3,7 +3,7 @@ let currentPage = 1;
 let moviesData = [];
 
 function fetchAllMovies() {
-    fetch("get_movies.php")
+    fetch("back/get_movies.php")
         .then(response => response.json())
         .then(movies => {
             moviesData = movies;

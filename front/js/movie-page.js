@@ -13,7 +13,7 @@ function addBookmarktoDB(movieId){
 
     
     const userId = 1;
-    fetch('bookmark_movie.php', {
+    fetch('back/bookmark_movie.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

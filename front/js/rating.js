@@ -72,7 +72,7 @@ function rateNow(num){
     const movieId = 2
     const userId = 1
 
-    fetch('rate_movie.php', {
+    fetch('back/rate_movie.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
