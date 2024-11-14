@@ -22,3 +22,24 @@ a{
 .text-left{
     text-align: left;
 }
+
+.base-login{
+    display: none !important;
+}
+.login-btn{
+    background-color: #D62020;
+    padding: 7px 40px;
+    color: black;
+    transition: all 1s ease-in-out;
+
+}
+.login-btn a {
+    color: black;
+    font-weight: bolder;
+}
+.login-btn:hover   {
+    color: #D62020;
+    background-color: #3a3a3a;
+    transition: all 0.8s ease-in-out;
+
+}
