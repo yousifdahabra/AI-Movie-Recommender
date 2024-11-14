@@ -1,5 +1,10 @@
 const loginForm = document.getElementById('loginForm');
 const signupForm = document.getElementById('signupForm');
+const loginAction = document.getElementById('login-action');
+
+loginAction.addEventListener('click', e => {
+    togglePassword('loginPassword');
+})
 
 loginForm.addEventListener('submit', handleLogin);
 signupForm.addEventListener('submit', handleSignup);
@@ -90,3 +95,4 @@ function togglePassword(inputId) {
     icon.classList.toggle('fa-eye');
     icon.classList.toggle('fa-eye-slash');
 }
+
