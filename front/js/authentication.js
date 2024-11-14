@@ -4,6 +4,12 @@ const loginAction = document.getElementById('login-action');
 
 loginAction.addEventListener('click', e => {
     togglePassword('loginPassword');
+});
+
+const signupAction = document.getElementById('signup-action');
+
+signupAction.addEventListener('click', e => {
+    togglePassword('signupPassword');
 })
 
 loginForm.addEventListener('submit', handleLogin);
