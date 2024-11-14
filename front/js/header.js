@@ -31,3 +31,17 @@ document.addEventListener('click', (e) => {
         mobileMenu.classList.remove('active');
     }
 });
+//////animation
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+    const header = document.getElementById("navbar");
+
+    if (window.scrollY > lastScrollY) {
+        gsap.to(header, {y: -header.offsetHeight, duration: 0.3});
+    } else {
+        gsap.to(header, {y: 0, duration: 0.3});
+    }
+
+    lastScrollY = window.scrollY;
+});
