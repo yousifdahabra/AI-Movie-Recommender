@@ -72,7 +72,7 @@ function rateNow(num){
     const movieId = 2
     const userId = 1
 
-    fetch('back/rate_movie.php', {
+    fetch('localhost/ai-movie-recommender/back/rate_movie.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

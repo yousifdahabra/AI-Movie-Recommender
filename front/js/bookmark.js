@@ -1,5 +1,7 @@
 function loadBookmarks() {
-    fetch(`get_bookmark.php?user_id=1`)
+    let user = JSON.parse(localStorage.getItem('user'));
+    let userId=user.user_id;
+    fetch(`localhost/ai-movie-recommender/back/get_bookmark.php?user_id=${userId}`)
     .then(response => response.json())
     .then(data => {
         const bookmarksSection = document.getElementById('bookmarks-section');
