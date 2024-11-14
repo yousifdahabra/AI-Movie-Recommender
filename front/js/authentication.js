@@ -16,6 +16,7 @@ loginForm.addEventListener('submit', handleLogin);
 signupForm.addEventListener('submit', handleSignup);
 
 async function handleLogin(event) {
+
     event.preventDefault();
 
     const email = document.getElementById('loginEmail').value;
@@ -31,10 +32,12 @@ async function handleLogin(event) {
         });
 
         const data = await response.json();
-
+        console.log("finish")
+        console.log(data)
+    
         if (data.success) {
             localStorage.setItem('user', JSON.stringify(data.user));
-            window.location.href = '/dashboard';
+            window.location.href = 'http://localhost/AI-Movie-Recommender/front/';
         } else {
             showError('loginEmailError', data.message);
             showError('loginPasswordError', data.message);
