@@ -1,3 +1,24 @@
+@font-face {
+    font-family: Muli-Regular;
+    src: url("../fonts/muli/Muli-Regular.ttf");
+}
+
+@font-face {
+    font-family: Rufina-Bold;
+    src: url("../fonts/rufina/Rufina-Bold.ttf");
+    font-weight: bold;
+}
+
+h1,h2{
+    font-family: "Rufina-Bold", Sans-serif;
+}
+p,a{
+    font-family: "Muli-Regular", Sans-serif;
+
+}
+a{
+    text-decoration: none;
+}
 .text-left{
     text-align: left;
 }

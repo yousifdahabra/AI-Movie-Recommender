@@ -32,7 +32,7 @@ const done_movies = (movies,method) =>{
               <div class="movies-image">
                   <img src="${movie.movie_image}" alt="">
                   <div class="movies-image-det flex flex-direction-column justify-content-center align-items-center">
-                      <a href='#?id=${movie.movie_id}' class="view-details">
+                      <a href='http://localhost/AI-Movie-Recommender/front/pages/movie-page.html?id=${movie.movie_id}' class="view-details">
                           More Details
                       </a>
                   </div>
