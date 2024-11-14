@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    max-width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+.movies-section {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.movies-cards{
+    gap: 20px;
+}
+
+.movie-card{
+    position: relative;
+    width: 250px;
+    height: 400px;
+    margin: 15px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+    background: #272727;
+    border-radius: 15px;
+    transition: all 0.8s ease-in-out;
+}
+.movie-card:hover .movies-image-det {
+	opacity: 1;
+}
+
+.movies-image{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.movies-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.movies-image:hover img {
+	transform: scale(1.1);
+}
+
+.movies-image-det{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d6202062;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.view-details{
+    background-color: #fff;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px;
+}
+.movie-info{
+    text-align: center;
+    color: #ddd;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 15px;
+}
+
+.movie-category{    
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0 auto 20px;
+    padding: 2px 13px;
+    background-color: #D62020;
+    color: #000000;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.movie-summary{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 235px;
+}
+.movies-section-title {
+    font-size: 2em;
+    color: #fff;
+}
+.movies-section-title.text-left {
+    text-align: left;
+    margin-left: 20px;
+}
+
+
+.movies-section-btn {
+    font-size: 20px;
+    padding: 6px 20px;
+    color: #D62020;
+    border-radius: 15px;
+    text-decoration:none;
+    transition: all 1s ease-in-out;
+
+}
+.movies-section-btn:hover{
+    color: black;
+    background-color: #D62020 ;
+    transition: all 0.8s ease-in-out;
+}
+.movies-section-head{
+    margin: 0px 30px;
+}

@@ -1,0 +1,65 @@
+@font-face {
+    font-family: Muli-Regular;
+    src: url("../fonts/muli/Muli-Regular.ttf");
+}
+
+@font-face {
+    font-family: Rufina-Bold;
+    src: url("../fonts/rufina/Rufina-Bold.ttf");
+    font-weight: bold;
+}
+
+h1,h2{
+    font-family: "Rufina-Bold", Sans-serif;
+}
+p,a{
+    font-family: "Muli-Regular", Sans-serif;
+
+}
+a{
+    text-decoration: none;
+}
+.text-left{
+    text-align: left;
+}
+
+.base-login{
+    display: none !important;
+}
+.login-btn{
+    background-color: #D62020;
+    padding: 7px 40px;
+    color: black;
+    transition: all 1s ease-in-out;
+    border-radius: 10px;
+
+
+}
+.login-btn a {
+    color: black;
+    font-weight: bolder;
+
+}
+.login-btn:hover   {
+    color: #D62020;
+    background-color: #3a3a3a;
+    transition: all 0.8s ease-in-out;
+
+}
+.sign-btn{
+    background-color: #D62020;
+    padding: 15px 45px;
+    color: black;
+    transition: all 1s ease-in-out;
+    border-radius: 10px;
+}
+.sign-btn a {
+    color: black;
+    font-weight: bolder;
+}
+.sign-btn:hover   {
+    color: #D62020;
+    background-color: #3a3a3a;
+    transition: all 0.8s ease-in-out;
+
+}

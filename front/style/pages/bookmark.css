@@ -11,3 +11,15 @@
     width:10px;
     
 }
+.bookmarks-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.bookmark-item{
+    width:20%;
+}
+.bookmark-section div{
+    width:50%;
+}

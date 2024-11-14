@@ -4,11 +4,11 @@ let signIn=document.getElementById('sign-in');
 let bookMark=document.getElementById('book-mark');
 let chatBot=document.getElementById('chat-bot');
 
-homePage.addEventListener('click',()=>{
-    window.location.href="home-page.html"
-});
+//homePage.addEventListener('click',()=>{
+ //   window.location.href="home-page.html"
+//});
 
-moviesList.addEventListener('click',()=>{
+/*moviesList.addEventListener('click',()=>{
     window.location.href="movies-page.html"
 });
 signIn.addEventListener('click',()=>{
@@ -19,4 +19,4 @@ chatBot.addEventListener('click',()=>{
 });
 bookMark.addEventListener('click',()=>{
     window.location.href="bookmark.html"
-});
+});*/

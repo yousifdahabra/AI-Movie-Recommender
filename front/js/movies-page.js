@@ -3,7 +3,7 @@ let currentPage = 1;
 let moviesData = [];
 
 function fetchAllMovies() {
-    fetch("get_movies.php")
+    fetch("back/get_movies.php")
         .then(response => response.json())
         .then(movies => {
             moviesData = movies;
@@ -28,7 +28,7 @@ function displayPage(page) {
         const movieItem = document.createElement("div");
         movieItem.classList.add("movie-item");
         movieItem.innerHTML = `
-            <img src="${movie.movie_image}" alt="${movie.movie_title}" >
+            <img src="${movie.movie_image}" >
             <p class="color-white">${movie.movie_title}</p>
         `;
         movieItem.addEventListener('click',()=>{
