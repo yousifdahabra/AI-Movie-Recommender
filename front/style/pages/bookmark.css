@@ -18,8 +18,16 @@
     padding: 20px;
 }
 .bookmark-item{
-    width:20%;
+    width:70%;
 }
 .bookmark-section div{
-    width:50%;
+    width:90%;
+}
+.wall-paper{
+    width:100%;
+    
+}
+.wall-paper img{
+    max-width: 1000px;
+    height: 400px;
 }
