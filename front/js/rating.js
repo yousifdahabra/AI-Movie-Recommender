@@ -45,3 +45,30 @@ starImg5.addEventListener('click',()=>{
     starImg5.src=linkSrcLiked;
 
 });
+let rate_btn=document.getElementById('rate-btn');
+rate_btn.addEventListener('click',()=>{
+    if(starImg5.src===linkSrcLiked){
+        rateNow(5);
+        return;
+    }
+    if(starImg4.src===linkSrcLiked){
+        rateNow(4);
+        return;
+    }
+    if(starImg3.src===linkSrcLiked){
+        rateNow(3);
+        return;
+    }
+    if(starImg2.src===linkSrcLiked){
+        rateNow(2);
+        return;
+    }
+    if(starImg1.src===linkSrcLiked){
+        rateNow(1);
+        return;
+    }    
+})
+function rateNow(num){
+    
+
+}
