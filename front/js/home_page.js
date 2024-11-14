@@ -88,15 +88,15 @@ const done_login = async  (login) =>{
     if(login.success === true){
         const base_login = document.querySelectorAll(".base-login");
         base_login.forEach((login) => {
-            login.className.remove('base-login')
-            login.className.add('login-succ')
+            // login.className.remove('base-login')
+            // login.className.add('login-succ')
         });
     }else{
         
         const base_login = document.querySelectorAll(".login-succ");
         base_login.forEach((login) => {
-            login.className.add('base-login')
-            login.className.remove('login-succ')
+            // login.className.add('base-login')
+            // login.className.remove('login-succ')
         });
 
     }
