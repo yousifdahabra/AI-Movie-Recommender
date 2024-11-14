@@ -132,5 +132,5 @@ body{
     transition: all 0.8s ease-in-out;
 }
 .movies-section-head{
-    gap: 500px;
+    margin: 0px 30px;
 }

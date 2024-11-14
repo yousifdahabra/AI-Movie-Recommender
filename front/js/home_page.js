@@ -1,9 +1,12 @@
 const new_movies_cards = document.getElementById("new_movies_cards");
-const get_db_new_movies = async () => {
+const trend_movies_cards = document.getElementById("trend_movies_cards");
+
+
+const get_db_movies = async (method) => {
     try {
       const get_method = await axios({
         method: "get",
-        url: "http://localhost/AI-Movie-Recommender/server/home_page/get_movies.php?filter_by='new'",
+        url: "http://localhost/AI-Movie-Recommender/server/home_page/get_movies.php?filter_by="+method+"",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
@@ -15,11 +18,11 @@ const get_db_new_movies = async () => {
       return [];
     }
 };
-const get_new_movies = async  () =>{
-    const movies = await get_db_new_movies() ;
-    await done_movies(movies)
+const get_movies = async  (method) =>{
+    const movies = await get_db_movies(method) ;
+    await done_movies(movies,method)
 }
-const done_movies = (movies) =>{
+const done_movies = (movies,method) =>{
     console.log(movies)
     let body = ``;
     movies.result.forEach((movie, index) => {
@@ -47,10 +50,12 @@ const done_movies = (movies) =>{
 
 
     })
-    new_movies_cards.innerHTML = body
-
-
+    if(method == 'new')
+        new_movies_cards.innerHTML = body
+    if(method == 'trend')
+        trend_movies_cards.innerHTML = body
 
 
 }
-get_new_movies();
+get_movies('new');
+get_movies('trend');
