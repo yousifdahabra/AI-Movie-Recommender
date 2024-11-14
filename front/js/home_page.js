@@ -1,5 +1,6 @@
 const new_movies_cards = document.getElementById("new_movies_cards");
 const trend_movies_cards = document.getElementById("trend_movies_cards");
+const recommend_movies_cards = document.getElementById("recommend_movies_cards");
 
 
 const get_db_movies = async (method) => {
@@ -54,11 +55,13 @@ const done_movies = (movies,method) =>{
         new_movies_cards.innerHTML = body
     if(method == 'trend')
         trend_movies_cards.innerHTML = body
-
+    if(method == 'recommend')
+        recommend_movies_cards.innerHTML = body
 
 }
 get_movies('new');
 get_movies('trend');
+get_movies('recommend');
 
 
 const check_login = async () => {
