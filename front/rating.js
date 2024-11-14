@@ -69,6 +69,29 @@ rate_btn.addEventListener('click',()=>{
     }    
 })
 function rateNow(num){
+    const movieId = 2
+    const userId = 1
+
+    fetch('rate_movie.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            movie_id: movieId,
+            user_id: userId,
+            rating: num
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log('Rating saved successfully');
+        } else {
+            console.log('Failed to save rating');
+        }
+    })
+    .catch(error => console.error('Error:', error));
     
 
 }
