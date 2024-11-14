@@ -45,3 +45,53 @@ starImg5.addEventListener('click',()=>{
     starImg5.src=linkSrcLiked;
 
 });
+let rate_btn=document.getElementById('rate-btn');
+rate_btn.addEventListener('click',()=>{
+    if(starImg5.src===linkSrcLiked){
+        rateNow(5);
+        return;
+    }
+    if(starImg4.src===linkSrcLiked){
+        rateNow(4);
+        return;
+    }
+    if(starImg3.src===linkSrcLiked){
+        rateNow(3);
+        return;
+    }
+    if(starImg2.src===linkSrcLiked){
+        rateNow(2);
+        return;
+    }
+    if(starImg1.src===linkSrcLiked){
+        rateNow(1);
+        return;
+    }    
+})
+function rateNow(num){
+    const movieId = 2
+    const userId = 1
+
+    fetch('back/rate_movie.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            movie_id: movieId,
+            user_id: userId,
+            rating: num
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log('Rating saved successfully');
+        } else {
+            console.log('Failed to save rating');
+        }
+    })
+    .catch(error => console.error('Error:', error));
+    
+
+}
