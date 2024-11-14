@@ -31,11 +31,14 @@ a{
     padding: 7px 40px;
     color: black;
     transition: all 1s ease-in-out;
+    border-radius: 10px;
+
 
 }
 .login-btn a {
     color: black;
     font-weight: bolder;
+
 }
 .login-btn:hover   {
     color: #D62020;
@@ -48,7 +51,7 @@ a{
     padding: 15px 45px;
     color: black;
     transition: all 1s ease-in-out;
-
+    border-radius: 10px;
 }
 .sign-btn a {
     color: black;
