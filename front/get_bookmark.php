@@ -2,7 +2,7 @@
 include 'connections.php';
 $user_id = $_GET['user_id'];
 
-$sql = "SELECT movies_tbl.title, movies_tbl.thumbnail FROM movies_bookmark_tbl 
+$sql = "SELECT movies_tbl.movie_title, movies_tbl.movie_image FROM movies_bookmark_tbl 
         JOIN movies_tbl ON movies_bookmark_tbl.movie_id = movies_tbl.movie_id 
         WHERE movies_bookmark_tbl.user_id = ?";
 $stmt = $conn->prepare($sql);

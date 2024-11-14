@@ -12,12 +12,6 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
-    $query = "DELETE FROM movies_bookmark_tbl WHERE user_id = ? AND movie_id = ?";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("ii", $user_id, $movie_id);
-    $stmt->execute();
-    $response = array('success' => true, 'isBookmarked' => false);
-} else {
     $query = "INSERT INTO movies_bookmark_tbl (user_id, movie_id) VALUES (?, ?)";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("ii", $user_id, $movie_id);
